@@ -1,0 +1,63 @@
+#ifndef __COLORS__
+#define __COLORS__
+
+#if defined(_WIN32) || defined(WIN32) || defined(__MINGW32__) || defined(__BORLANDC__)
+ #define __OS__ "WINDOWS"
+ #include <Windows.h>
+
+  #define FORE_COLOR_BLACK  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0)
+  #define FORE_COLOR_RED    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED)
+  #define FORE_COLOR_GREEN  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN) 
+  #define FORE_COLOR_BLUE   SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE)
+  #define FORE_COLOR_YELLOW SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 14)
+  #define FORE_COLOR_PURPLE SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 5)
+  #define FORE_COLOR_WHITE  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15)
+
+  #define BACK_COLOR_BLACK  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0)
+  #define BACK_COLOR_RED    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 192)
+  #define BACK_COLOR_GREEN  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 160)
+  #define BACK_COLOR_BLUE   SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 144)
+  #define BACK_COLOR_YELLOW SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 224)
+  #define BACK_COLOR_PURPLE SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 80)
+  #define BACK_COLOR_WHITE  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 240)
+
+#elif defined(linux) || defined(__CYGWIN__)
+  #define __OS__ "LINUX"
+
+  #define FORE_COLOR_BLACK  printf("\033[0;30m")
+  #define FORE_COLOR_RED    printf("\033[31m")
+  #define FORE_COLOR_GREEN  printf("\033[32m")
+  #define FORE_COLOR_BLUE   printf("\033[34m")
+  #define FORE_COLOR_YELLOW printf("\033[1;33m")
+  #define FORE_COLOR_PURPLE printf("\033[0;35m")
+  #define FORE_COLOR_WHITE  printf("\033[0m")
+
+  #define BACK_COLOR_BLACK  printf("\e[0;30m\u@\h:\W$\e[m")
+  #define BACK_COLOR_RED    printf("\e[0;31m\u@\h:\W$\e[m")
+  #define BACK_COLOR_GREEN  printf("\e[0;32m\u@\h:\W$\e[m")
+  #define BACK_COLOR_BLUE   printf("\e[0;34m\u@\h:\W$\e[m")
+  #define BACK_COLOR_YELLOW printf("\e[1;33m\u@\h:\W$\e[m")
+  #define BACK_COLOR_PURPLE printf("\e[0;35m\u@\h:\W$\e[m")
+  #define BACK_COLOR_WHITE  printf("\e[1;37m\u@\h:\W$\e[m")
+
+#elif (defined(__APPLE__) || defined(__OSX__) || defined(__MACOS__)) && defined(__MACH__)
+  #define __OS__ "MACOSX"
+
+  #define FORE_COLOR_BLACK  printf("\033[0;30m")
+  #define FORE_COLOR_RED    printf("\033[31m")
+  #define FORE_COLOR_GREEN  printf("\033[32m")
+  #define FORE_COLOR_BLUE   printf("\033[34m")
+  #define FORE_COLOR_YELLOW printf("\033[1;33m")
+  #define FORE_COLOR_PURPLE printf("\033[0;35m")
+  #define FORE_COLOR_WHITE  printf("\033[0m")
+
+  #define BACK_COLOR_BLACK  printf("\e[0;30m\u@\h:\W$\e[m")
+  #define BACK_COLOR_RED    printf("\e[0;31m\u@\h:\W$\e[m")
+  #define BACK_COLOR_GREEN  printf("\e[0;32m\u@\h:\W$\e[m")
+  #define BACK_COLOR_BLUE   printf("\e[0;34m\u@\h:\W$\e[m")
+  #define BACK_COLOR_YELLOW printf("\e[1;33m\u@\h:\W$\e[m")
+  #define BACK_COLOR_PURPLE printf("\e[0;35m\u@\h:\W$\e[m")
+  #define BACK_COLOR_WHITE  printf("\e[1;37m\u@\h:\W$\e[m")
+#endif
+
+#endif //Starlang colors.st
