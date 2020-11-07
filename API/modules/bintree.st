@@ -24,18 +24,18 @@ void destroy_node(node *n) {
   }
 }
 
-void insert(int data, node *tree) {
-    if( !*tree ) {
-        *tree = (node*) malloc( sizeof( node ) );
-        (*tree)->data = data;
-        (*tree)->left = 0;    
-        (*tree)->right = 0;
+void insert(int data, node* tree) {
+    if( tree->data == NULL ) {
+        tree = (node*)malloc( sizeof( node ) );
+        tree->data = data;
+        tree->left =  NULL;    
+        tree->right = NULL;
 
-    } else if(data < (*tree)->data) {
-        insert( data, &(*tree)->left );
+    } else if(data < tree->data) {
+        insert( data, tree->left );
 
-    } else if(data > (*tree)->data) {
-        insert( data, &(*tree)->right );
+    } else if(data > (tree)->data) {
+        insert( data, tree->right );
     }
 }
 
