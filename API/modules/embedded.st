@@ -3,8 +3,12 @@
 
 #define _STDIO_H_
 
-#define VGA_ADDRESS 0xB8000
-#define BUFSIZE     2200
+#define KEYBOARD_PORT 0x60
+
+#define VGA_ADDRESS   0xB8000
+#define BUFSIZE       2200
+
+#define NULL          0
 
 #define DefBackColor BLACK
 #define DefForeColor WHITE
@@ -100,7 +104,7 @@ void newline() {
 }
 
 void sysputc(char character, Ui8 fore_color, Ui8 back_color) {
-	VgaBuffer[vga_index] = vga_entry(character, fore_color, back_color);
+	VgaBuffer[VgaIndex] = vga_entry(character, fore_color, back_color);
 	VgaIndex++;
 }
 
@@ -124,7 +128,7 @@ void gotoxy(u16 x, u16 y) {
 	VgaIndex += x;
 }
 
-void ClearScreen(Ui8 fore_color, Ui8 back_color) {
+void ClearScreen(u8 fore_color, u8 back_color) {
 	ClearVgaBuffer(&VgaBuffer, fore_color, back_color);
 }
 
