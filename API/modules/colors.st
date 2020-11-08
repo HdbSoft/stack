@@ -2,7 +2,6 @@
 #define __COLORS__
 
 #if defined(_WIN32) || defined(WIN32) || defined(__MINGW32__) || defined(__BORLANDC__)
- #define __OS__ "WINDOWS"
  #include <Windows.h>
 
   #define FORE_COLOR_BLACK  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0)
@@ -22,8 +21,6 @@
   #define BACK_COLOR_WHITE  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 240)
 
 #elif defined(linux) || defined(__CYGWIN__)
-  #define __OS__ "LINUX"
-
   #define FORE_COLOR_BLACK  printf("\033[0;30m")
   #define FORE_COLOR_RED    printf("\033[31m")
   #define FORE_COLOR_GREEN  printf("\033[32m")
@@ -41,8 +38,6 @@
   #define BACK_COLOR_WHITE  printf("\e[1;37m\u@\h:\W$\e[m")
 
 #elif (defined(__APPLE__) || defined(__OSX__) || defined(__MACOS__)) && defined(__MACH__)
-  #define __OS__ "MACOSX"
-
   #define FORE_COLOR_BLACK  printf("\033[0;30m")
   #define FORE_COLOR_RED    printf("\033[31m")
   #define FORE_COLOR_GREEN  printf("\033[32m")

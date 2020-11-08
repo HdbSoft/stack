@@ -13,10 +13,13 @@
 
 #define sqrt5 2.2360679774
 
-static int hcd(int num1, int num2) {
-    int hcd = 0;
-    int a = max(num1, num2);
-    int b = min(num1, num2);
+#define max(x, y) x > y ? x : y
+#define min(x, y) x < y ? x : y
+
+static i32 hcd(i32 num1, i32 num2) {
+    i32 hcd = 0;
+    i32 a = max(num1, num2);
+    i32 b = min(num1, num2);
     do {
         hcd = b;
         b = a % b;
@@ -25,10 +28,10 @@ static int hcd(int num1, int num2) {
     return hcd;
 }
 
-static int mcm(int num1, int num2) {
-    int mcm = 0;
-    int a = max(num1, num2);
-    int b = min(num1, num2);
+static i32 mcm(i32 num1, i32 num2) {
+    i32 mcm = 0;
+    i32 a = max(num1, num2);
+    i32 b = min(num1, num2);
     mcm = (a / hcd(a, b)) * b;
     return mcm;
 }

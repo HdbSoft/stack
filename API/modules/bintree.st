@@ -2,12 +2,12 @@
 #define __BINARY_TREE__
 
 typedef struct node {
-  int data;
+  i32 data;
   struct node *left;
   struct node *right;
 } node;
 
-node* new_node(int d) {
+node* new_node(i32 d) {
 	node* n;
 	n->data  = d;
 	n->left  = NULL;
@@ -24,7 +24,7 @@ void destroy_node(node *n) {
   }
 }
 
-void insert(int data, node* tree) {
+void insert(i32 data, node* tree) {
     if( tree->data == NULL ) {
         tree = (node*)malloc( sizeof( node ) );
         tree->data = data;
@@ -39,7 +39,7 @@ void insert(int data, node* tree) {
     }
 }
 
-node* search(int key, struct node *tree) {
+node* search(i32 key, struct node *tree) {
   if( tree ) {
       if( key == tree->data ) {
           return tree;
