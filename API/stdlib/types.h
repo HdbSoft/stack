@@ -34,6 +34,10 @@ typedef signed int       s32;
 typedef signed long      s64;
 typedef signed long long s128;
 
+typedef float       f32;
+typedef double      f64;
+typedef long double f128;
+
 typedef char  str[];
 typedef char* String;
 
