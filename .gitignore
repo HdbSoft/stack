@@ -1,3 +1,6 @@
+# Cargo target
+/cli/target
+
 # Prerequisites
 *.d
 
