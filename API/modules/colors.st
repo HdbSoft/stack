@@ -2,8 +2,6 @@
 #define __COLORS__
 
 #if defined(_WIN32) || defined(WIN32) || defined(__MINGW32__) || defined(__BORLANDC__)
- #include <Windows.h>
-
   #define FORE_COLOR_BLACK  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0)
   #define FORE_COLOR_RED    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED)
   #define FORE_COLOR_GREEN  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN) 

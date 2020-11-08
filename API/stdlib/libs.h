@@ -13,4 +13,8 @@
 #include <stdbool.h>
 #include <float.h>
 
+#ifdef _WIN32
+ #include <Windows.h>
+#endif
+
 #endif //Starlang libs.h

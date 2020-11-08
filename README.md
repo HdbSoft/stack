@@ -22,6 +22,25 @@ and then use make to build and install it:
 $ make && make install
 ```
 
+### The Starlang API
+The Starlang API contains some features which could be used in your program. Here you have the modules list:
+- **bintree.st:** Binary trees library
+- **colors.st:** Console colors library
+- **dll.st:** Dll management library
+- **keyboard.st:** Keyboard detection library
+- **maths.st:** Maths constants and functions
+- **rng.st:** Random number generation library
+
+You can import them by using the `@import` macro:
+```c
+@import bintree.st
+@import colors.st
+@import dll.st
+@import keyboard.st
+@import maths.st
+@import rng.st
+```
+
 ### Examples
 In this paragraph you can see some Starlang examples:
 
@@ -38,7 +57,7 @@ main {
 @import rng.st
 
 main {
-	int n = random();
+	int n = randnum();
 
 	WriteIntln(n);
 	out 0;
@@ -59,6 +78,18 @@ main {
 	WriteIntln(root->left->data);
 	WriteIntln(root->right->data);
 
+	out 0;
+}
+```
+
+#### Console colors
+```c
+@import colors.st
+
+main {
+	FORE_COLOR_GREEN;
+
+	WriteStringln("Hello, World!");
 	out 0;
 }
 ```
