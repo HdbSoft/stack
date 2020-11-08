@@ -22,6 +22,47 @@ and then use make to build and install it:
 $ make && make install
 ```
 
+### Examples
+In this paragraph you can see some Starlang examples:
+
+#### Hello, World!
+```c
+main {
+	WriteStringln("Hello, World!");
+	out 0;
+}
+```
+
+#### Random number generation
+```c
+@import rng.st
+
+main {
+	int n = random();
+
+	WriteIntln(n);
+	out 0;
+}
+```
+
+#### Binary tree
+```c
+@import bintree.st
+
+main {
+	node* root = new_node(1);
+
+	root->left  = new_node(0);
+	root->right = new_node(2);
+
+	WriteIntln(root->data);
+	WriteIntln(root->left->data);
+	WriteIntln(root->right->data);
+
+	out 0;
+}
+```
+
 ### Contributing
 If you want to contribute, you need to fork this repository, and then commit on it:
 ```bash
