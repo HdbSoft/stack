@@ -16,3 +16,4 @@ test:
 	@starlang run tests/random.st
 	@starlang run tests/colors.st
 	@starlang run tests/bintree.st
+	@starlang build tests/embedded.st -o kernel.o
