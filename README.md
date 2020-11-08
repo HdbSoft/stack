@@ -27,6 +27,7 @@ The Starlang API contains some features which could be used in your program. Her
 - **bintree.st:** Binary trees library
 - **colors.st:** Console colors library
 - **dll.st:** Dll management library
+- **embedded.st:** Embedded programming library
 - **keyboard.st:** Keyboard detection library
 - **maths.st:** Maths constants and functions
 - **rng.st:** Random number generation library
@@ -36,6 +37,7 @@ You can import them by using the `@import` macro:
 @import bintree.st
 @import colors.st
 @import dll.st
+@import embedded.st
 @import keyboard.st
 @import maths.st
 @import rng.st
