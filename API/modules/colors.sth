@@ -1,5 +1,5 @@
-#ifndef __COLORS__
-#define __COLORS__
+#ifndef __COLORS_STH__
+#define __COLORS_STH__
 
 #if defined(_WIN32) || defined(WIN32) || defined(__MINGW32__) || defined(__BORLANDC__)
   #define FORE_COLOR_BLACK  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0)
@@ -53,4 +53,4 @@
   #define BACK_COLOR_WHITE  printf("\e[1;37m\u@\h:\W$\e[m")
 #endif
 
-#endif //Starlang colors.st
+#endif //Starlang colors.sth

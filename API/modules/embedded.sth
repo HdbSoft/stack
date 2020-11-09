@@ -1,5 +1,5 @@
-#ifndef __EMBEDDED__
-#define __EMBEDDED__
+#ifndef __EMBEDDED_STH__
+#define __EMBEDDED_STH__
 
 #define _STDIO_H_
 
@@ -141,4 +141,4 @@ void sleep(u32 timer_count) {
 	}
 }
 
-#endif //Starlang embedded.st
+#endif //Starlang embedded.sth

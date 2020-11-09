@@ -1,5 +1,5 @@
-#ifndef __DLL__
-#define __DLL__
+#ifndef __DLL_STH__
+#define __DLL_STH__
 
 #include <dlfcn.h>
 
@@ -17,4 +17,4 @@ var GetDllValue(void* dllfile, String value) {
 	return (var)dlsym(dllfile, value);
 }
 
-#endif //Starlang dll.st
+#endif //Starlang dll.sth

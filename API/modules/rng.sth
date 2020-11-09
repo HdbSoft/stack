@@ -1,5 +1,5 @@
-#ifndef __RANDOM__
-#define __RANDOM__
+#ifndef __RANDOM_STH__
+#define __RANDOM_STH__
 
 #include <time.h>
 
@@ -19,4 +19,4 @@ i64 randmax(i64 max) {
 	return randnum() % max;
 }
 
-#endif //Starlang rng.st
+#endif //Starlang rng.sth

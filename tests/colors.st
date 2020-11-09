@@ -1,4 +1,5 @@
-@import colors.st
+@import stdlib.sth
+@import colors.sth
 
 main {
 	FORE_COLOR_BLACK;

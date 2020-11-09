@@ -1,4 +1,4 @@
-@import embedded.st
+@import embedded.sth
 
 void KernelMain() {
 	sysputs("Hello, Kernel world!");

@@ -1,4 +1,5 @@
-@import bintree.st
+@import stdlib.sth
+@import bintree.sth
 
 main {
 	node* root = new_node(1);
