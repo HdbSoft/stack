@@ -27,6 +27,7 @@ The Starlang API contains some features which could be used in your program. Her
 - **stdlib.sth:** I/O and other functions
 - **bintree.sth:** Binary trees library
 - **colors.sth:** Console colors library
+- **cli.sth:** Build great CLIs with this library
 - **dll.sth:** Dll management library
 - **embedded.sth:** Embedded programming library
 - **keyboard.sth:** Keyboard detection library
@@ -38,6 +39,7 @@ You can import them by using the `@import` macro:
 @import stdlib.sth
 @import bintree.sth
 @import colors.sth
+@import cli.sth
 @import dll.sth
 @import embedded.sth
 @import keyboard.sth
