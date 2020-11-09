@@ -24,23 +24,25 @@ $ make && make install
 
 ### The Starlang API
 The Starlang API contains some features which could be used in your program. Here you have the modules list:
-- **bintree.st:** Binary trees library
-- **colors.st:** Console colors library
-- **dll.st:** Dll management library
-- **embedded.st:** Embedded programming library
-- **keyboard.st:** Keyboard detection library
-- **maths.st:** Maths constants and functions
-- **rng.st:** Random number generation library
+- **stdlib.sth:** I/O and other functions
+- **bintree.sth:** Binary trees library
+- **colors.sth:** Console colors library
+- **dll.sth:** Dll management library
+- **embedded.sth:** Embedded programming library
+- **keyboard.sth:** Keyboard detection library
+- **maths.sth:** Maths constants and functions
+- **rng.sth:** Random number generation library
 
 You can import them by using the `@import` macro:
 ```c
-@import bintree.st
-@import colors.st
-@import dll.st
-@import embedded.st
-@import keyboard.st
-@import maths.st
-@import rng.st
+@import stdlib.sth
+@import bintree.sth
+@import colors.sth
+@import dll.sth
+@import embedded.sth
+@import keyboard.sth
+@import maths.sth
+@import rng.sth
 ```
 
 ### Examples
@@ -48,6 +50,8 @@ In this paragraph you can see some Starlang examples:
 
 #### Hello, World!
 ```c
+@import stdlib.sth
+
 main {
 	WriteStringln("Hello, World!");
 	out 0;
@@ -56,6 +60,7 @@ main {
 
 #### Random number generation
 ```c
+@import stdlib.sth
 @import rng.st
 
 main {
@@ -68,6 +73,7 @@ main {
 
 #### Binary tree
 ```c
+@import stdlib.sth
 @import bintree.st
 
 main {
@@ -86,6 +92,7 @@ main {
 
 #### Console colors
 ```c
+@import stdlib.sth
 @import colors.st
 
 main {
