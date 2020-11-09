@@ -14,7 +14,9 @@ typedef char*  (**str_ptr)   (char*);
 //Function pointers
 
 typedef void*       var;
-typedef const void* val;
+typedef void*       func;
+
+typedef const void* def;
 
 typedef char      i8;
 typedef short     i16;

@@ -1,0 +1,49 @@
+#ifndef __CLI_STH__
+#define __CLI_STH__
+
+@import colors.sth
+
+String APP_NAME;
+String APP_VERSION;
+String APP_LICENSE;
+
+void Cli(cli* c);
+
+typedef struct cli {
+    String name;
+    int argc;
+    String path;
+    String* args;
+} cli;
+
+cli* new_cli(String name, int argc, String* argv) {
+    String* args;
+    for (int i = 1; argv[i]; i++) {
+        args[i-1] = argv[i];
+    }
+
+    cli* output = { name, argc, argv[0], args };
+    return output;
+}
+
+void print_error(String error_message) {
+    FORE_COLOR_RED;
+    printf("ERROR:\n");
+
+    FORE_COLOR_WHITE;
+    printf("%s", error_name);
+}
+
+void print_usage(cli* c) {
+    printf("%s USAGE:\n"
+           "%s <command>\n"
+           "\n"
+           "For more information try --help\n", c->name);
+}
+
+main {
+    cli* c = new_cli(argc, argv);
+    Cli(c);
+}
+
+#endif //Starlang cli.sth
