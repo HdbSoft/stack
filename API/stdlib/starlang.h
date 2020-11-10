@@ -55,4 +55,11 @@
  * ARG5
 */
 
+#include "dlls.h"
+/* Starlang dll utils
+ * DLL_EXPORT
+ * using
+ * access
+*/
+
 #endif //Starlang API

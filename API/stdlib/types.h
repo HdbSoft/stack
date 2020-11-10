@@ -15,6 +15,7 @@ typedef char*  (**str_ptr)   (char*);
 
 typedef void*       var;
 typedef void*       func;
+typedef void*       lib;
 
 typedef const void* def;
 
