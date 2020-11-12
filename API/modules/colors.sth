@@ -55,4 +55,4 @@
   #define BACK_COLOR_WHITE  printf("\e[1;37m\u@\h:\W$\e[m")
 #endif
 
-#endif //Starlang colors.sth
+#endif //stack colors.sth

@@ -1,7 +1,7 @@
-#ifndef STARLANG_CONSTS_H
-#define STARLANG_CONSTS_H
+#ifndef STACK_CONSTS_H
+#define STACK_CONSTS_H
 
-#define STARLANG_VER "0.1.0"
+#define __STACK_VER__ "0.1.0"
 
 #define __PATH__ argv[0]
 #define ARG1     argv[1]
@@ -20,4 +20,4 @@
  #define __OS__ "UNKNOWN"
 #endif
 
-#endif //Starlang consts.h
+#endif //stack consts.h

@@ -1,5 +1,5 @@
-#ifndef STARLANG_TYPES_H
-#define STARLANG_TYPES_H
+#ifndef STACK_TYPES_H
+#define STACK_TYPES_H
 
 typedef void   (*void_ptr)   (void);
 typedef void*  (**value_ptr) (void*);
@@ -14,7 +14,7 @@ typedef char*  (**str_ptr)   (char*);
 //Function pointers
 
 typedef void*       var;
-typedef void*       func;
+typedef void*       fn;
 typedef void*       lib;
 
 typedef const void* def;
@@ -44,4 +44,4 @@ typedef long double f128;
 typedef char  str[];
 typedef char* String;
 
-#endif //Starlang types.h
+#endif //stack types.h

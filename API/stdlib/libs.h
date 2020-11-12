@@ -1,5 +1,5 @@
-#ifndef STARLANG_LIBS_H
-#define STARLANG_LIBS_H
+#ifndef STACK_LIBS_H
+#define STACK_LIBS_H
 
 #include <assert.h>
 #include <errno.h>
@@ -9,4 +9,4 @@
 #include <stdbool.h>
 #include <float.h>
 
-#endif //Starlang libs.h
+#endif //stack libs.h

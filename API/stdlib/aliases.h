@@ -1,5 +1,5 @@
-#ifndef STARLANG_ALIASES_H
-#define STARLANG_ALIASES_H
+#ifndef STACK_ALIASES_H
+#define STACK_ALIASES_H
 
 #define main\
 	int main(int argc, String* argv)
@@ -14,4 +14,4 @@
 #define jmp goto
 #define out return
 
-#endif //Starlang aliases.h
+#endif //stack aliases.h

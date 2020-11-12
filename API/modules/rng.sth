@@ -19,4 +19,4 @@ i64 randmax(i64 max) {
 	return randnum() % max;
 }
 
-#endif //Starlang rng.sth
+#endif //stack rng.sth

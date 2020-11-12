@@ -1,4 +1,4 @@
-@import stdlib.sth
+@import std
 
 main {
 	WriteStringln("Hello, World!");

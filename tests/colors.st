@@ -1,4 +1,4 @@
-@import stdlib.sth
+@import std
 @import colors.sth
 
 main {

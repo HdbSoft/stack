@@ -1,5 +1,5 @@
-#ifndef STARLANG_DLLS_H
-#define STARLANG_DLLS_H
+#ifndef STACK_DLLS_H
+#define STACK_DLLS_H
 
 #include <dlfcn.h>
 
@@ -20,4 +20,4 @@ var access(lib dll, String val) {
 }
 //dll access functions
 
-#endif //Starlang dlls.h
+#endif //stack dlls.h

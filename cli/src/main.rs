@@ -2,7 +2,7 @@ use std::process::Command;
 use structopt::StructOpt;
 use exitfailure::ExitFailure;
 
-mod starlang;
+mod stack;
 
 #[derive(StructOpt)]
 struct Cli {
@@ -12,7 +12,7 @@ struct Cli {
 
 fn main() -> Result<(), ExitFailure> {
 	let args     = Cli::from_args();
-	let compiler = starlang::Starlang::new();
+	let compiler = stack::Stack::new();
 
 	let source = match std::fs::read_to_string(args.source) {
 		Err(error) => return Err(error.into()),

@@ -1,5 +1,5 @@
 [package]
-name = "starlang"
+name = "stack"
 description = "A language that allows the control of C and the ergonomics of JAVA"
 version = "0.1.0"
 readme = "../README.md"

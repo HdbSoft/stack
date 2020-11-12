@@ -1,18 +1,18 @@
-/* The Starlang standard API
- * this files contain some Starlang
+/* The stack standard API
+ * this files contain some stack
  * features, such as loop, main or foreach
- * code blocks, and of course, Starlang's
+ * code blocks, and of course, stack's
  * data types: u8, i64, f32, s128, String,
  * str...
  *
  * MIT licensed, read LICENSE.md file for
  * more information
 */
-#ifndef STARLANG
-#define STARLANG
+#ifndef _STACK_
+#define _STACK_
 
 #include "libs.h"
-/* Starlang external libraries:
+/* stack external libraries:
  * assert.h
  * errno.h
  * string.h
@@ -22,7 +22,7 @@
 */
 
 #include "types.h"
-/* Starlang data types:
+/* stack data types:
  * void, int... pointers
  * var, func, def
  * i8, i16, i32, i64, i128
@@ -35,7 +35,7 @@
 */
 
 #include "aliases.h"
-/* Starlang aliases:
+/* stack aliases:
  * main              => int main(int argc, String* argv)
  * loop              => while (1)
  * foreach(from, to) => for (int i = from; i < to; i++)
@@ -44,8 +44,8 @@
 */
 
 #include "consts.h"
-/* Starlang consts
- * STARLANG_VER
+/* stack consts
+ * __STACK_VER__
  * __OS__
  * __PATH__
  * ARG1
@@ -56,10 +56,10 @@
 */
 
 #include "dlls.h"
-/* Starlang dll utils
+/* stack dll utils
  * DLL_EXPORT
  * using
  * access
 */
 
-#endif //Starlang API
+#endif //stack API

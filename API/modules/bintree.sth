@@ -53,4 +53,4 @@ node* search(i32 key, struct node *tree) {
   } else return 0;
 }
 
-#endif //Starlang bintree.sth
+#endif //stack bintree.sth

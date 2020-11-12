@@ -46,4 +46,4 @@ main {
     Cli(c);
 }
 
-#endif //Starlang cli.sth
+#endif //stack cli.sth

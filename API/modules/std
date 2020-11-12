@@ -28,4 +28,4 @@ u32 digits(int num) {
     return count;
 }
 
-#endif //Starlang stdlib.sth
+#endif //stack stdlib.sth
