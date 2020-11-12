@@ -1,58 +1,56 @@
-# The Starlang programming language
-Starlang is a small, fast and lightweight programming language that allows the C/C++ control and the JAVA ergonomy. Starlang conpiles into C code, but this process is automatized by the Starlang compiler, wich outputs an executable file (*.exe*, *.app*, *.out*...).
+# The stack programming language
+Stack is a small, fast and lightweight programming language that allows the C/C++ control and the JAVA ergonomy. Stack compiles into C code, but this process is automatized by the stack compiler, wich outputs an executable file (*.exe*, *.app*, *.out*...).
 
-### Getting Starlang
-If you want to get the Starlang compiler and API, you have 2 options, get the binaries in the releases page or build it from the source code, but in both cases you need to have the GCC compiler installed.
+### Getting stack
+If you want to get the stack compiler and API, you have 2 options, get the binaries in the releases page or build it from the source code, but in both cases you need to have the GCC compiler installed.
 
 #### Binary releases
-First, go to the [releases page](https://github.com/HdbSoft/Starlang/releases) and go to the latest version release, then get the *.zip* file and uncompress it, place the compiler files in the **/bin** folder if you are on macOS or LINUX, or in **C:\WINDOWS** if you are on Windows. Then place the API files in the **$HOME/Starlang** folder and you will have done. Finally, run this command:
+First, go to the [releases page](https://github.com/HdbSoft/stack/releases) and go to the latest version release, then get the *.zip* file and uncompress it, place the compiler files in the **/bin** folder if you are on macOS or LINUX, or in **C:\WINDOWS** if you are on Windows. Then place the API files in the **$HOME/stack** folder and you will have done. Finally, run this command:
 ```bash
-$ starlang -h
+$ stack -h
 ```
 and it should output some text.
 
 #### Building it from source
-If you want to build Starlang from source, you have to get the first thing you need to do is to clone the source code:
+If you want to build stack from source, you have to get the first thing you need to do is to clone the source code:
 ```bash
-$ git clone https://github.com/HdbSoft/Starlang.git starlang
-$ cd starlang
+$ git clone https://github.com/HdbSoft/stack.git stack
+$ cd stack
 ```
 and then use make to build and install it:
 ```bash
 $ make && make install
 ```
 
-### The Starlang API
-The Starlang API contains some features which could be used in your program. Here you have the modules list:
-- **stdlib.sth:** I/O and other functions
+### The stack API
+The stack API contains some features which could be used in your program. Here you have the modules list:
+- **std:** I/O and other functions
 - **bintree.sth:** Binary trees library
 - **colors.sth:** Console colors library
 - **cli.sth:** Build great CLIs with this library
 - **dll.sth:** Dll management library
-- **embedded.sth:** Embedded programming library
 - **keyboard.sth:** Keyboard detection library
 - **maths.sth:** Maths constants and functions
 - **rng.sth:** Random number generation library
 
 You can import them by using the `@import` macro:
 ```c
-@import stdlib.sth
+@import std
 @import bintree.sth
 @import colors.sth
 @import cli.sth
 @import dll.sth
-@import embedded.sth
 @import keyboard.sth
 @import maths.sth
 @import rng.sth
 ```
 
 ### Examples
-In this paragraph you can see some Starlang examples:
+In this paragraph you can see some stack examples:
 
 #### Hello, World!
 ```c
-@import stdlib.sth
+@import std
 
 main {
 	WriteStringln("Hello, World!");
@@ -62,7 +60,7 @@ main {
 
 #### Random number generation
 ```c
-@import stdlib.sth
+@import std
 @import rng.st
 
 main {
@@ -75,7 +73,7 @@ main {
 
 #### Binary tree
 ```c
-@import stdlib.sth
+@import std
 @import bintree.st
 
 main {
@@ -94,7 +92,7 @@ main {
 
 #### Console colors
 ```c
-@import stdlib.sth
+@import std
 @import colors.st
 
 main {
@@ -142,4 +140,4 @@ SOFTWARE.
 <br>
 <br>
 
-I hope you liked Starlang, please give us a star ⭐
+I hope you liked stack, please give us a star ⭐
