@@ -1,4 +1,4 @@
-# Starlang makefile
+# stack makefile
 #
 # options:
 # install, test
@@ -6,14 +6,13 @@ output:
 	@cd cli && cargo build
 
 install:
-	@mkdir $HOME/Starlang/
+	@mkdir $HOME/stack/
 	@cp -R API/stdlib /usr/include
-	@cp -R API/modules $HOME/Starlang
-	@cp cli/target/starlang /bin && cp cli/target/starlang.pdb /bin
+	@cp -R API/modules $HOME/stack
+	@cp cli/target/stack /bin && cp cli/target/stack.pdb /bin
 
 test:
-	@starlang run tests/hello.st
-	@starlang run tests/random.st
-	@starlang run tests/colors.st
-	@starlang run tests/bintree.st
-	@starlang build tests/embedded.st -o kernel.o
+	@stack run tests/hello.st
+	@stack run tests/random.st
+	@stack run tests/colors.st
+	@stack run tests/bintree.st
