@@ -1,0 +1,52 @@
+#ifndef __BINARY_STH__
+#define __BINARY_STH__
+
+typedef bool bit;
+typedef bit* bitvec;
+
+#define WriteBit(b)\
+	printf("%b", b)
+
+i32 bitvlen(bitvec bin) {
+	i32 o=0;
+
+	for (i32 i=0; bin[i]; i++) o++;
+	return o;
+}
+
+bitvec encode(i32 number) {
+	bitvec o;
+	i32 i=0;
+
+	while (number) {
+		o[i] = number % 2;
+		number /= 2;
+
+		i++;
+	}
+
+	return o;
+}
+
+i32 decode(bitvec bin) {
+	i32 o=0;
+
+	for (i32 i; i < bitvlen(bin); i++) {
+		if (bin[i] == 0) o += 0;
+
+		else
+			o += pow(2, i);
+	}
+
+	return o;
+}
+
+void WriteBitVector(bitvec bv) {
+	for (i32 i; i < bitvlen(bv); i++) {
+		WriteBit(bv[i]);
+	}
+
+	return NULL;
+}
+
+#endif //stack binary.sth

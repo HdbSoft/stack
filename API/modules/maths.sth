@@ -1,8 +1,6 @@
 #ifndef __MATHS_STH__
 #define __MATHS_STH__
 
-#include <math.h>
-
 #define pi    3.14159265358
 #define e     2.71828182845
 
