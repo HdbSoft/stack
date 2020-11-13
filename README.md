@@ -26,6 +26,7 @@ $ make && make install
 The stack API contains some features which could be used in your program. Here you have the modules list:
 - **std:** I/O and other functions
 - **bintree.sth:** Binary trees library
+- **binary.sth:** Bits and bit vectors library
 - **colors.sth:** Console colors library
 - **cli.sth:** Build great CLIs with this library
 - **dll.sth:** Dll management library
@@ -37,6 +38,7 @@ You can import them by using the `@import` macro:
 ```c
 @import std
 @import bintree.sth
+@import binary.sth
 @import colors.sth
 @import cli.sth
 @import dll.sth
@@ -85,6 +87,18 @@ main {
 	WriteIntln(root->data);
 	WriteIntln(root->left->data);
 	WriteIntln(root->right->data);
+
+	out 0;
+}
+```
+
+#### Binary encoding
+```c
+@import binary.sth
+
+main {
+	bitvec b = encode(14);
+	WriteBitVector(b);
 
 	out 0;
 }
