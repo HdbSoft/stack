@@ -1,12 +1,12 @@
 # stack makefile
 #
 # options:
-# output, install, test
+# output, locate, install, test
 output:
 	@cd stack && cargo build
 	@cd heap && cargo build
 
-install:
+locate:
 	@mkdir $HOME/stack/
 	@mkdir $HOME/stack/api/
 	@mkdir $HOME/stack/cmp/
@@ -17,6 +17,9 @@ install:
 	@cp heap/target/heap $HOME/stack/heap/ && cp heap/target/heap.pdb $HOME/stack/heap/
 	export PATH=$HOME/stack/cmp:$PATH
 	export PATH=$HOME/stack/heap:$PATH
+
+install:
+	@make && make locate
 
 test:
 	@stack run tests/hello.st
