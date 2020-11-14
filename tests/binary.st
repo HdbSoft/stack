@@ -1,4 +1,4 @@
-@import binary.sth
+@import binary
 
 main {
 	bitvec b = encode(14);

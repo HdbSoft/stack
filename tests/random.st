@@ -1,5 +1,5 @@
 @import std
-@import rng.sth
+@import rng
 
 main {
 	i32 n = randnum();
