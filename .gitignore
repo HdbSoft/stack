@@ -1,5 +1,6 @@
 # Cargo target
-/cli/target
+/stack/target
+/heap/target
 
 # Prerequisites
 *.d
