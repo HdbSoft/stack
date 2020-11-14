@@ -4,6 +4,8 @@ use exitfailure::ExitFailure;
 
 mod stack;
 
+use stack::{Stack, code};
+
 #[derive(StructOpt)]
 struct Cli {
 	#[structopt(parse(from_os_str))]
@@ -12,14 +14,15 @@ struct Cli {
 
 fn main() -> Result<(), ExitFailure> {
 	let args     = Cli::from_args();
-	let compiler = stack::Stack::new();
-
+	
 	let source = match std::fs::read_to_string(args.source) {
 		Err(error) => return Err(error.into()),
 		Ok(source) => source,
 	};
 
-	compiler.cmp(source, "output.c");
+	let compiler = Stack::new(source);
+
+	let output: code = compiler.cmp();
 
 	let gcc = Command::new("gcc")
 	                  .arg("-w")
