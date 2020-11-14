@@ -2,13 +2,43 @@
 Stack is a small, fast and lightweight programming language that allows the C/C++ control and the JAVA ergonomy. Stack compiles into C code, but this process is automatized by the stack compiler, wich outputs an executable file (*.exe*, *.app*, *.out*...).
 
 ### Getting stack
-If you want to get the stack compiler and API, you have 2 options, get the binaries in the releases page or build it from the source code, but in both cases you need to have the GCC compiler installed.
+If you want to get the stack compiler and API, you have 2 options, get the binaries or the install script in the releases page or build it from the source code, but if you want to build it from the source code you need to have GCC, GNU Make and Rust (with cargo) installed.
 
 #### Binary releases
+In this step you have to between a *.zip* file or a script installer (*.sh*, *.bat*).
+
+##### *.zip* file
 First, go to the [releases page](https://github.com/HdbSoft/stack/releases) and go to the latest version release, then get the *.zip* file and uncompress it, place the compiler files in the **/bin** folder if you are on macOS or LINUX, or in **C:\WINDOWS** if you are on Windows. Then place the API files in the **$HOME/stack** folder and you will have done. Finally, run this command:
 ```bash
 $ stack -h
 ```
+and it should output some text.
+
+##### Script installer
+First, go to the [releases page](https://github.com/HdbSoft/stack/releases) and go to the latest version release, then get the *.sh* file if you are on UNIX or the *.bat* file if you are on Windows. Then run it by the following command:
+###### Windows
+```batch
+C:\> .\stack.win.bat
+: Normal instalation
+
+C:\> .\stack.win.bat source
+: From the source code instalation
+```
+
+###### UNIX
+```bash
+$ ./stack.unix.sh
+# Normal instalation
+
+$ ./stack.unix.sh source
+# From the source code instalation
+```
+
+Finally run the following command:
+```bash
+stack -h
+```
+
 and it should output some text.
 
 #### Building it from source
