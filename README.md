@@ -25,26 +25,24 @@ $ make && make install
 ### The stack API
 The stack API contains some features which could be used in your program. Here you have the modules list:
 - **std:** I/O and other functions
-- **bintree.sth:** Binary trees library
-- **binary.sth:** Bits and bit vectors library
-- **colors.sth:** Console colors library
-- **cli.sth:** Build great CLIs with this library
-- **dll.sth:** Dll management library
-- **keyboard.sth:** Keyboard detection library
-- **maths.sth:** Maths constants and functions
-- **rng.sth:** Random number generation library
+- **bintree:** Binary trees library
+- **binary:** Bits and bit vectors library
+- **colors:** Console colors library
+- **cli:** Build great CLIs with this library
+- **keyboard:** Keyboard detection library
+- **maths:** Maths constants and functions
+- **rng:** Random number generation library
 
 You can import them by using the `@import` macro:
 ```c
 @import std
-@import bintree.sth
-@import binary.sth
-@import colors.sth
-@import cli.sth
-@import dll.sth
-@import keyboard.sth
-@import maths.sth
-@import rng.sth
+@import bintree
+@import binary
+@import colors
+@import cli
+@import keyboard
+@import maths
+@import rng
 ```
 
 ### Examples
@@ -63,7 +61,7 @@ main {
 #### Random number generation
 ```c
 @import std
-@import rng.st
+@import rng
 
 main {
 	int n = randnum();
@@ -76,7 +74,7 @@ main {
 #### Binary tree
 ```c
 @import std
-@import bintree.st
+@import bintree
 
 main {
 	node* root = new_node(1);
@@ -94,7 +92,7 @@ main {
 
 #### Binary encoding
 ```c
-@import binary.sth
+@import binary
 
 main {
 	bitvec b = encode(14);
@@ -107,7 +105,7 @@ main {
 #### Console colors
 ```c
 @import std
-@import colors.st
+@import colors
 
 main {
 	FORE_COLOR_GREEN;
