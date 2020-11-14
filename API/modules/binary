@@ -1,5 +1,5 @@
-#ifndef __BINARY_STH__
-#define __BINARY_STH__
+#ifndef __BINARY__
+#define __BINARY__
 
 typedef bool bit;
 typedef bit* bitvec;
@@ -49,4 +49,4 @@ void WriteBitVector(bitvec bv) {
 	return NULL;
 }
 
-#endif //stack binary.sth
+#endif //stack binary

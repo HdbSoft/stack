@@ -1,5 +1,5 @@
-#ifndef __KEYBOARD_STH__
-#define __KEYBOARD_STH__
+#ifndef __KEYBOARD__
+#define __KEYBOARD__
 
 #define KEY_A                    0x1E
 #define KEY_B                    0x30
@@ -80,4 +80,4 @@
 #define KEY_SPACE                0x39
 #define KEY_TAB                  0x0F
 
-#endif //stack keyboard.sth
+#endif //stack keyboard

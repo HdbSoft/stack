@@ -1,5 +1,5 @@
-#ifndef __BINARY_TREE_STH__
-#define __BINARY_TREE_STH__
+#ifndef __BINARY_TREE__
+#define __BINARY_TREE__
 
 typedef struct node {
   i32 data;
@@ -53,4 +53,4 @@ node* search(i32 key, struct node *tree) {
   } else return 0;
 }
 
-#endif //stack bintree.sth
+#endif //stack bintree

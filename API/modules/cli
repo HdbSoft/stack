@@ -1,5 +1,5 @@
-#ifndef __CLI_STH__
-#define __CLI_STH__
+#ifndef __CLI__
+#define __CLI__
 
 @import colors.sth
 
@@ -46,4 +46,4 @@ main {
     Cli(c);
 }
 
-#endif //stack cli.sth
+#endif //stack cli

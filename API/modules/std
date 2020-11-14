@@ -1,5 +1,5 @@
-#ifndef __STDLIB_STH__
-#define __STDLIB_STH__
+#ifndef _STD_
+#define _STD_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,4 +28,4 @@ u32 digits(int num) {
     return count;
 }
 
-#endif //stack stdlib.sth
+#endif //stack std

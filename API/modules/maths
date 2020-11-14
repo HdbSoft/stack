@@ -1,5 +1,5 @@
-#ifndef __MATHS_STH__
-#define __MATHS_STH__
+#ifndef __MATHS__
+#define __MATHS__
 
 #define pi    3.14159265358
 #define e     2.71828182845
@@ -36,4 +36,4 @@ static i32 mcm(i32 num1, i32 num2) {
     return mcm;
 }
 
-#endif //stack maths.sth
+#endif //stack maths
