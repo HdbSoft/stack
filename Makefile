@@ -1,10 +1,17 @@
 # stack makefile
 #
 # options:
-# output, locate, install, test
+# output, build, locate, install, test
 output:
 	@cd stack && cargo build
 	@cd heap && cargo build
+
+build:
+	@mkdir build
+	@cp -R API/stdlib build/stdlib
+	@cp -R API/modules build/modules
+	@cp stack/target/stack build/ && cp stack/target/stack.pdb build/
+	@cp heap/target/heap build/ && cp heap/target/heap.pdb build/
 
 locate:
 	@mkdir $HOME/stack/
