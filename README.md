@@ -89,10 +89,10 @@ In this paragraph you can see some stack examples:
 ```c
 @import std
 
-main {
+main does
 	WriteStringln("Hello, World!");
-	out 0;
-}
+	end;
+fi
 ```
 
 #### Random number generation
@@ -100,12 +100,12 @@ main {
 @import std
 @import rng
 
-main {
+main does
 	int n = randnum();
 
 	WriteIntln(n);
-	out 0;
-}
+	end;
+fi
 ```
 
 #### Binary tree
@@ -113,7 +113,7 @@ main {
 @import std
 @import bintree
 
-main {
+main does
 	node* root = new_node(1);
 
 	root->left  = new_node(0);
@@ -123,20 +123,20 @@ main {
 	WriteIntln(root->left->data);
 	WriteIntln(root->right->data);
 
-	out 0;
-}
+	end;
+fi
 ```
 
 #### Binary encoding
 ```c
 @import binary
 
-main {
+main does
 	bitvec b = encode(14);
 	WriteBitVector(b);
 
-	out 0;
-}
+	end;
+fi
 ```
 
 #### Console colors
@@ -144,12 +144,12 @@ main {
 @import std
 @import colors
 
-main {
+main does
 	FORE_COLOR_GREEN;
 
 	WriteStringln("Hello, World!");
-	out 0;
-}
+	end;
+fi
 ```
 
 ### Contributing
