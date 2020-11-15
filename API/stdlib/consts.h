@@ -10,6 +10,20 @@
 #define ARG4     argv[4]
 #define ARG5     argv[5]
 
+#ifdef __clang__
+ #define __compiler__ "clang"
+#elif __GNUC__
+ #define __compiler__ "gcc"
+#elif _MSC_VER
+ #define __compiler__ "MSCV"
+#elif __BORLANDC__
+ #define __compiler__ "borland"
+#elif __MINGW32__
+ #define __compiler__ "mingw32"
+#else
+ #define __compiler__ "unknown"
+#endif
+
 #if defined(_WIN32) || defined(WIN32) || defined(__MINGW32__) || defined(__BORLANDC__)
  #define __OS__ "WINDOWS"
 #elif defined(linux) || defined(__CYGWIN__)

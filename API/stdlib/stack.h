@@ -11,6 +11,13 @@
 #ifndef _STACK_
 #define _STACK_
 
+#include "syntax.h"
+/* stack syntax header:
+ * does => {
+ * fi   => }
+ * end  => return 0;
+*/
+
 #include "libs.h"
 /* stack external libraries:
  * assert.h
@@ -36,16 +43,17 @@
 
 #include "aliases.h"
 /* stack aliases:
- * main              => int main(int argc, String* argv)
- * loop              => while (1)
- * foreach(from, to) => for (int i = from; i < to; i++)
- * jmp               => goto
- * out               => return
+ * main             => int main(int argc, String* argv)
+ * loop             => while (1)
+ * foreach(i, l, r) => for (int i = l; i < r; i++)
+ * jmp              => goto
+ * out              => return
 */
 
 #include "consts.h"
 /* stack consts
  * __STACK_VER__
+ * __compiler__
  * __OS__
  * __PATH__
  * ARG1
