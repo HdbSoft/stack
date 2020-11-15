@@ -7,7 +7,7 @@
 #define loop\
 	while (1)
 
-#define foreach(l, r)\
+#define foreach(i, l, r)\
 	for (int i = l; i < r; i++)
 //Code block aliases
 
