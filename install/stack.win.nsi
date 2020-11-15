@@ -43,19 +43,12 @@ Section "Uninstall"
 	RMDir /r "$INSTDIR\*.*"    
 
 	RMDir "$INSTDIR"
- 
-;Delete Uninstaller And Unistall Registry Entries
-  DeleteRegKey HKEY_LOCAL_MACHINE "SOFTWARE\${PRODUCT}"
-  DeleteRegKey HKEY_LOCAL_MACHINE "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT}"  
+
+	DeleteRegKey HKEY_LOCAL_MACHINE "SOFTWARE\${PRODUCT}"
+	DeleteRegKey HKEY_LOCAL_MACHINE "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT}"  
  
 SectionEnd
- 
- 
-;--------------------------------    
-;MessageBox Section
- 
- 
-;Function that calls a messagebox when installation finished correctly
+
 Function .onInstSuccess
   MessageBox MB_OK "You have successfully installed ${STACK_BRANDINGTEXT}."
 FunctionEnd

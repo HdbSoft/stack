@@ -2,10 +2,10 @@
 Stack is a small, fast and lightweight programming language that allows the C/C++ control and the JAVA ergonomy. Stack compiles into C code, but this process is automatized by the stack compiler, wich outputs an executable file (*.exe*, *.app*, *.out*...).
 
 ### Getting stack
-If you want to get the stack compiler and API, you have 2 options, get the binaries or the install script in the releases page or build it from the source code, but if you want to build it from the source code you need to have GCC, GNU Make and Rust (with cargo) installed.
+If you want to get the stack compiler and API, you have 2 options, get the binaries or an installer in the releases page or build it from the source code, but if you want to build it from the source code you need to have GCC, GNU Make and Rust (with cargo) installed.
 
 #### Binary releases
-In this step you have to between a *.zip* file or a script installer (*.sh*, *.bat*).
+In this step you have to between a *.zip* file, a script installer (*.sh*, *.bat*) or a *.exe* installer.
 
 ##### *.zip* file
 First, go to the [releases page](https://github.com/HdbSoft/stack/releases) and go to the latest version release, then get the *.zip* file and uncompress it, place the compiler files in the **/bin** folder if you are on macOS or LINUX, or in **C:\WINDOWS** if you are on Windows. Then place the API files in the **$HOME/stack** folder and you will have done. Finally, run this command:
@@ -41,6 +41,11 @@ stack -h
 
 and it should output some text.
 
+##### *.exe* installer
+As in the previous steps, you have to go to the [releases page](https://github.com/HdbSoft/stack/releases) and then to the latest release, next you have to click on the *.exe* file and save it, after that you have to run it and it will be installed in your device.
+
+***NOTE:*** The *.exe* file is only for Windows, not for macOS or Linux.
+
 #### Building it from source
 If you want to build stack from source, you have to get the first thing you need to do is to clone the source code:
 ```bash
@@ -49,7 +54,7 @@ $ cd stack
 ```
 and then use make to build and install it:
 ```bash
-$ make && make install
+$ make install
 ```
 
 ### The stack API
@@ -59,6 +64,7 @@ The stack API contains some features which could be used in your program. Here y
 - **binary:** Bits and bit vectors library
 - **colors:** Console colors library
 - **cli:** Build great CLIs with this library
+- **embed:** Embedded programming library
 - **keyboard:** Keyboard detection library
 - **maths:** Maths constants and functions
 - **rng:** Random number generation library
@@ -70,6 +76,7 @@ You can import them by using the `@import` macro:
 @import binary
 @import colors
 @import cli
+@import embed
 @import keyboard
 @import maths
 @import rng
