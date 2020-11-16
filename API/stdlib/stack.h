@@ -16,6 +16,8 @@
  * does => {
  * fi   => }
  * end  => return 0;
+ * DLL_EXPORT
+ * link(path)
 */
 
 #include "libs.h"
@@ -61,13 +63,6 @@
  * ARG3
  * ARG4
  * ARG5
-*/
-
-#include "dlls.h"
-/* stack dll utils
- * DLL_EXPORT
- * using
- * access
 */
 
 #endif //stack API
