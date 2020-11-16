@@ -1,7 +1,7 @@
 #ifndef __CLI__
 #define __CLI__
 
-@import colors.sth
+import colors
 
 String APP_NAME;
 String APP_VERSION;

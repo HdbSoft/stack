@@ -1,7 +1,7 @@
 #ifndef __EMBEDDED__
 #define __EMBEDDED__
 
-@disable stdlibs
+disable std
 
 #include <reg51.h>
 
