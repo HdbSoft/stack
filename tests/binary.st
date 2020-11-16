@@ -1,8 +1,8 @@
-@import binary
+import binary
 
-main {
+main does
 	bitvec b = encode(14);
 	WriteBitVector(b);
 
-	out 0;
-}
+	end;
+fi

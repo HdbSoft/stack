@@ -1,7 +1,6 @@
-@import std
-@import colors
+import colors
 
-main {
+main does
 	FORE_COLOR_BLACK;
 	FORE_COLOR_RED;
 	FORE_COLOR_GREEN;
@@ -19,5 +18,5 @@ main {
 	BACK_COLOR_WHITE;
 
 	WriteStringln("Hello, World!");
-	out 0;
-}
+	end;
+fi

@@ -1,9 +1,8 @@
-@import std
-@import rng
+import rng
 
-main {
+main does
 	i32 n = randnum();
 
 	WriteIntln(n);
-	out 0;
-}
+	end;
+fi

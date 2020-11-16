@@ -1,7 +1,6 @@
-@import std
-@import bintree
+import bintree
 
-main {
+main does
 	node* root = new_node(1);
 
 	root->left  = new_node(0);
@@ -11,5 +10,5 @@ main {
 	WriteIntln(root->left->data);
 	WriteIntln(root->right->data);
 
-	out 0;
-}
+	end;
+fi

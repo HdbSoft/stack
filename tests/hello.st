@@ -1,6 +1,4 @@
-@import std
-
-main {
+main does
 	WriteStringln("Hello, World!");
-	out 0;
-}
+	end;
+fi
