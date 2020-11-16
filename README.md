@@ -59,7 +59,6 @@ $ make install
 
 ### The stack API
 The stack API contains some features which could be used in your program. Here you have the modules list:
-- **std:** I/O and other functions
 - **bintree:** Binary trees library
 - **binary:** Bits and bit vectors library
 - **colors:** Console colors library
@@ -69,17 +68,17 @@ The stack API contains some features which could be used in your program. Here y
 - **maths:** Maths constants and functions
 - **rng:** Random number generation library
 
-You can import them by using the `@import` macro:
+You can import them by using the `import` macro:
 ```c
-@import std
-@import bintree
-@import binary
-@import colors
-@import cli
-@import embed
-@import keyboard
-@import maths
-@import rng
+import std
+import bintree
+import binary
+import colors
+import cli
+import embed
+import keyboard
+import maths
+import rng
 ```
 
 ### Examples
@@ -87,8 +86,6 @@ In this paragraph you can see some stack examples:
 
 #### Hello, World!
 ```c
-@import std
-
 main does
 	WriteStringln("Hello, World!");
 	end;
@@ -97,8 +94,7 @@ fi
 
 #### Random number generation
 ```c
-@import std
-@import rng
+import rng
 
 main does
 	int n = randnum();
@@ -110,8 +106,7 @@ fi
 
 #### Binary tree
 ```c
-@import std
-@import bintree
+import bintree
 
 main does
 	node* root = new_node(1);
@@ -129,7 +124,7 @@ fi
 
 #### Binary encoding
 ```c
-@import binary
+import binary
 
 main does
 	bitvec b = encode(14);
@@ -141,8 +136,7 @@ fi
 
 #### Console colors
 ```c
-@import std
-@import colors
+import colors
 
 main does
 	FORE_COLOR_GREEN;
