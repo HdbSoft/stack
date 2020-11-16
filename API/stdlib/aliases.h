@@ -4,7 +4,7 @@
 #define main\
 	int main(int argc, String* argv)
 
-#define loop\
+#define repeat\
 	while (1)
 
 #define elif\

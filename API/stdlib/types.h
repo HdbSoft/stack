@@ -20,6 +20,7 @@ typedef void*       lib;
 typedef const void* def;
 
 typedef char      i8;
+typedef char      byte;
 typedef short     i16;
 typedef int       i32;
 typedef long      i64;
