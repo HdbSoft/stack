@@ -20,14 +20,17 @@
  * link(path)
 */
 
-#include "libs.h"
-/* stack external libraries:
+#include "std.h"
+/* stack standard libraries & funcs:
+ * stdio.h
+ * stdlib.h
  * assert.h
  * errno.h
  * string.h
  * stdint.h
  * stdbool.h
  * float.h
+ * digits(num)
 */
 
 #include "types.h"

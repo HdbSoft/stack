@@ -1,8 +1,17 @@
-#ifndef _STD_
-#define _STD_
+#ifndef STACK_STD_H
+#define STACK_STD_H
 
 #include <stdio.h>
 #include <stdlib.h>
+
+#include <assert.h>
+#include <errno.h>
+#include <math.h>
+
+#include <string.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <float.h>
 
 #define WriteString(s)   printf("%s",   s)
 #define WriteStringln(s) printf("%s\n", s)
