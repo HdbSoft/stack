@@ -25,16 +25,13 @@
 #define WriteChar(c)     printf("%c",   c)
 #define WriteCharln(c)   printf("%c\n", c)
 
-u32 digits(int num) {
-    u32 count = 0;
-    if (num == 0)
-        return 1;
+#if defined(__STDIO_H__) && defined(__STDLIB_H__)
+ void panic(String message) {
+ 	printf("%s", message);
+ 	exit(1);
 
-    while (num > 0) {
-        count++;
-        num = num / 10;
-    }
-    return count;
-}
+ 	return;
+ }
+#endif
 
 #endif //stack std.h
