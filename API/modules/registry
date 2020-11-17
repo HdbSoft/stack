@@ -1,0 +1,30 @@
+#ifndef __REGISTRY__
+#define __REGISTRY__
+
+#define REGSIZE 1
+
+#define reg    register byte  //reg data type
+#define regvec register byte* //regvec data type
+
+i32 regvlen(regvec r) {
+	i32 o=0;
+
+	for (i32 i=0; r[i]; i++) o++;
+	return o;
+}
+
+byte new_reg(byte val) {
+	return (byte)val;
+}
+
+byte* new_regvec(byte* val) {
+	return (byte*)val;
+}
+
+void WriteRegVector(regvec r) {
+	for (int i = 0; i < regvlen(r); i++) {
+		printf("%d, ", r[i]);
+	}
+}
+
+#endif //stack registry
