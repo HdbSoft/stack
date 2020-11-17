@@ -66,6 +66,7 @@ The stack API contains some features which could be used in your program. Here y
 - **embed:** Embedded programming library
 - **keyboard:** Keyboard detection library
 - **maths:** Maths constants and functions
+- **registry:** CPU registers library
 - **rng:** Random number generation library
 
 You can import them by using the `import` macro:
@@ -78,6 +79,7 @@ import cli
 import embed
 import keyboard
 import maths
+import registry
 import rng
 ```
 
@@ -129,6 +131,18 @@ import binary
 main does
 	bitvec b = encode(14);
 	WriteBitVector(b);
+
+	end;
+fi
+```
+
+#### CPU registers
+```c
+import registry
+
+main does
+	reg CU = new_reg(12);
+	WriteIntln(CU);
 
 	end;
 fi
