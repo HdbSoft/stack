@@ -72,7 +72,7 @@ The stack API contains some features which could be used in your program. Here y
 You can import them by using the `import` macro:
 ```c
 import std
-import bintree
+import structs
 import binary
 import colors
 import cli
@@ -108,13 +108,13 @@ fi
 
 #### Binary tree
 ```c
-import bintree
+import structs
 
 main does
-	node* root = new_node(1);
+	bnode* root = new_bnode(1);
 
-	root->left  = new_node(0);
-	root->right = new_node(2);
+	root->left  = new_bnode(0);
+	root->right = new_bnode(2);
 
 	WriteIntln(root->data);
 	WriteIntln(root->left->data);
