@@ -1,4 +1,4 @@
-use std::process::Command;
+use std::fs::remove_file;
 use structopt::StructOpt;
 use exitfailure::ExitFailure;
 
@@ -8,6 +8,8 @@ use stack::{Stack, code};
 
 #[derive(StructOpt)]
 struct Cli {
+	option: String,
+
 	#[structopt(parse(from_os_str))]
 	source: std::path::PathBuf,
 }
@@ -20,15 +22,13 @@ fn main() -> Result<(), ExitFailure> {
 		Ok(source) => source,
 	};
 
-	let compiler = Stack::new(source);
+	let mut compiler = Stack::new(source);
 
-	let output: code = compiler.cmp();
+	compiler.cmp();
 
-	let gcc = Command::new("gcc")
-	                  .arg("-w")
-					  .arg("output.c")
-					  .output()
-					  .expect("Could not compile C code");
+	if args.option.eq("run") {
+		remove_file("output");
+	}
 
 	Ok(())
 }

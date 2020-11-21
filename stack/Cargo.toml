@@ -10,3 +10,4 @@ edition = "2018"
 [dependencies]
 structopt = "^0.3.20"
 exitfailure = "^0.5.1"
+cc = "^1.0.65"

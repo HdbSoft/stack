@@ -17,7 +17,8 @@
 #define Struct\
 	typedef struct
 
-#define jmp goto
-#define out return
+#define jmp  goto
+#define out  return
+#define pass
 
 #endif //stack aliases.h

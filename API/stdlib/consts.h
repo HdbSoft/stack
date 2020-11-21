@@ -3,6 +3,8 @@
 
 #define __STACK_VER__ "0.1.0"
 
+#define None 0
+
 #define __PATH__ argv[0]
 #define ARG1     argv[1]
 #define ARG2     argv[2]
