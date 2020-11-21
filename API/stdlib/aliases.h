@@ -14,6 +14,9 @@
 	for (int i = l; i < r; i++)
 //Code block aliases
 
+#define Struct\
+	typedef struct
+
 #define jmp goto
 #define out return
 

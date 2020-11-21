@@ -1,0 +1,98 @@
+#ifndef __DATA_STRUCTURES__
+#define __DATA_STRUCTURES__
+
+Struct bnode {
+	i32 data;
+	struct bnode *left;
+	struct bnode *right;
+} bnode;
+// binary tree node
+
+Struct lnode {
+	i32 data;
+	struct lnode *next;
+} lnode;
+// linked list node
+
+bnode* new_bnode(i32 d) {
+	bnode* n;
+	n->data  = d;
+	n->left  = NULL;
+	n->right = NULL;
+
+	return n;
+}
+
+lnode* new_lnode(i32 d) {
+	lnode* n;
+	n->data = d;
+	n->next = NULL;
+}
+// constructors
+
+void destroy_bnode(bnode *n) {
+  if( n != 0 ) {
+      destroy_bnode(n->left);
+      destroy_bnode(n->right);
+      free( n );
+  }
+}
+
+void bnode_push(i32 data, bnode* tree) {
+    if( tree->data == NULL ) {
+        tree = (bnode*)malloc( sizeof( bnode ) );
+        tree->data = data;
+        tree->left =  NULL;    
+        tree->right = NULL;
+
+    } else if(data < tree->data) {
+        bnode_push( data, tree->left );
+
+    } else if(data > (tree)->data) {
+        bnode_push( data, tree->right );
+    }
+}
+
+bnode* bnode_search(i32 key, bnode *tree) {
+  if( tree ) {
+      if( key == tree->data ) {
+          return tree;
+
+      } else if( key < tree->data ) {
+          return bnode_search(key, tree->left);
+
+      } else {
+          return bnode_search(key, tree->right);
+      }
+  } else return 0;
+}
+// binary tree functions
+
+void lnode_push(lnode *head, i32 val) {
+    lnode *current = head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+
+    current->next = (lnode*) malloc(sizeof(lnode));
+    current->next->data = val;
+    current->next->next = NULL;
+}
+
+i32 lnode_pop(lnode *head) {
+    i32 retval = -1;
+    lnode *next_node = NULL;
+
+    if (head == NULL) {
+        return -1;
+    }
+
+    next_node = (head)->next;
+    retval = (head)->data;
+    free(head);
+    head = next_node;
+
+    return retval;
+}
+
+#endif //stack structs
